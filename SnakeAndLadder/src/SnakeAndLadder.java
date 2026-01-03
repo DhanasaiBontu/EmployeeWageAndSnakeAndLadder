@@ -25,16 +25,26 @@ public class SnakeAndLadder {
     public void checkOption(int die) {
         int option = new Random().nextInt(3); // 0-No Play, 1-Ladder, 2-Snake
 
+        int previousPosition = position;
+
         switch (option) {
             case 0:
                 System.out.println("No Play");
                 break;
+
             case 1:
                 position += die;
+                if (position > 100) {
+                    position = previousPosition;
+                }
                 System.out.println("Ladder! Position: " + position);
                 break;
+
             case 2:
                 position -= die;
+                if (position < 0) {
+                    position = 0;
+                }
                 System.out.println("Snake! Position: " + position);
                 break;
         }
