@@ -5,6 +5,7 @@ public class Main {
         EmployeeWageComputation emp = new EmployeeWageComputation();
         emp.checkAttendance();
         emp.calculateDailyWage();
+        emp.calculatePartTimeWage();
 
     }
 }
