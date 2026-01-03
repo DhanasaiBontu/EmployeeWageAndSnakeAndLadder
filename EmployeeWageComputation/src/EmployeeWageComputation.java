@@ -60,6 +60,40 @@ public class EmployeeWageComputation {
         System.out.println("Monthly Employee Wage: " + monthlyWage);
     }
 
+    public void calculateWageTillCondition() {
+        int wagePerHour = 20;
+        int fullDayHour = 8;
+        int partTimeHour = 4;
+        int maxWorkingDays = 20;
+        int maxWorkingHours = 100;
+
+        int totalHours = 0;
+        int totalDays = 0;
+
+        while (totalHours < maxWorkingHours && totalDays < maxWorkingDays) {
+            totalDays++;
+
+            int empType = new Random().nextInt(3);
+            int empHours;
+
+            switch (empType) {
+                case 1:
+                    empHours = fullDayHour;
+                    break;
+                case 2:
+                    empHours = partTimeHour;
+                    break;
+                default:
+                    empHours = 0;
+            }
+
+            totalHours += empHours;
+        }
+
+        int totalWage = totalHours * wagePerHour;
+        System.out.println("Total Wage till condition: " + totalWage);
+    }
+
 
 
 }
