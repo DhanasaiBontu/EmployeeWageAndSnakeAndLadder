@@ -21,11 +21,36 @@ public class EmployeeWageComputation {
 
     public void calculatePartTimeWage() {
         int wagePerHour = 20;
-        int partTimeHours = 8;
+        int partTimeHours = 4;
 
         int partTimeWage = wagePerHour * partTimeHours;
         System.out.println("Part Time Employee Wage: " + partTimeWage);
     }
+
+
+    public void calculateWageUsingSwitchCase() {
+        int wagePerHour = 20;
+        int fullDayHour = 8;
+        int partTimeHour = 4;
+
+        int empType = new Random().nextInt(3);
+        int empHours;
+
+        switch (empType) {
+            case 1:
+                empHours = fullDayHour;
+                break;
+            case 2:
+                empHours = partTimeHour;
+                break;
+            default:
+                empHours = 0;
+        }
+
+        int wage = empHours * wagePerHour;
+        System.out.println("Employee Wage using Switch Case: " + wage);
+    }
+
 
 
 

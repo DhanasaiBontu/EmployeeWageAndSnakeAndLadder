@@ -6,6 +6,7 @@ public class Main {
         emp.checkAttendance();
         emp.calculateDailyWage();
         emp.calculatePartTimeWage();
+        emp.calculateWageUsingSwitchCase();
 
     }
 }
