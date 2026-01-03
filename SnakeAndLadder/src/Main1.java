@@ -5,6 +5,6 @@ public class Main1{
 
         SnakeAndLadder game = new SnakeAndLadder();
         game.startGame();
-        game.rollDie();
+
     }
 }

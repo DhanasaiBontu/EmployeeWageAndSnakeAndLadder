@@ -9,10 +9,29 @@ public class SnakeAndLadder {
 
         int die = rollDie();
         System.out.println("Die rolled: " + die);
+        checkOption(die);
     }
 
     public int rollDie() {
         Random random = new Random();
         return random.nextInt(6) + 1;
+    }
+
+    public void checkOption(int die) {
+        int option = new Random().nextInt(3); // 0-No Play, 1-Ladder, 2-Snake
+
+        switch (option) {
+            case 0:
+                System.out.println("No Play");
+                break;
+            case 1:
+                position += die;
+                System.out.println("Ladder! Position: " + position);
+                break;
+            case 2:
+                position -= die;
+                System.out.println("Snake! Position: " + position);
+                break;
+        }
     }
 }
