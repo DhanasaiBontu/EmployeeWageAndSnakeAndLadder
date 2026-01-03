@@ -10,7 +10,12 @@ public class SnakeAndLadder {
         int die = rollDie();
         System.out.println("Die rolled: " + die);
         checkOption(die);
+        if (position < 0) {
+            position = 0;
+        }
+        System.out.println("Player reached position 100");
     }
+
 
     public int rollDie() {
         Random random = new Random();
